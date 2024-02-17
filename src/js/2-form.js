@@ -1,3 +1,4 @@
+console.log("Form")
 const STORAGE_KEY = "feedback-msg";
 
 const form = document.querySelector(".feedback-form");
