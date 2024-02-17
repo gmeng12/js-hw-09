@@ -22,6 +22,9 @@ form.addEventListener('submit', (event) => {
         localStorage.removeItem(STORAGE_KEY);
         form.reset();
     }
+    else {
+        alert("Будь ласка, заповніть обидва поля форми.");
+    }
 })
 
 form.addEventListener('input', (event) => {
