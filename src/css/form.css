@@ -6,6 +6,7 @@ form {
         width: 408px;
         height: 296px;
         background: #fff;
+        font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -20,6 +21,7 @@ button {
             line-height: 1.5;
             letter-spacing: 0.04em;
             color: #fff;
+            border: none;
 }
 
 label {
@@ -38,11 +40,13 @@ textarea {
     margin-top: 8px;
     max-height: 80px;
     max-width: 360px;
+    border-radius: 4px;
 }
 input {
     margin-top: 8px;
     max-height: 40px;
     max-width: 360px;
+    border-radius: 4px;
 }
 .messageLabel {
     margin-bottom: 16px;

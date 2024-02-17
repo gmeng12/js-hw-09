@@ -5,8 +5,8 @@ const form = document.querySelector(".feedback-form");
 
 
 function readFormData(form) {
-    const message = form.message.value;
-    const email = form.email.value;
+    const message = form.message.value.trim();
+    const email = form.email.value.trim();
     return {
         message,
         email
@@ -15,12 +15,16 @@ function readFormData(form) {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    localStorage.removeItem(STORAGE_KEY);
-    form.reset();
+    const data = readFormData(event.currentTarget);
+
+    if (data.email && data.message) {
+        console.log("Form", data);
+        localStorage.removeItem(STORAGE_KEY);
+        form.reset();
+    }
 })
 
 form.addEventListener('input', (event) => {
-    event.preventDefault();
     const data = readFormData(event.currentTarget);
     const jsonData = JSON.stringify(data);
     localStorage.setItem(STORAGE_KEY, jsonData);
